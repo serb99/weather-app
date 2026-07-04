@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <main>
+    <h1>Your little Weather Assistant</h1>
+
+    <!-- Search controls -->
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Enter city name" />
+      <button type="submit" id="search-btn">Get Weather</button>
+    </form>
+
+    <!-- Loading state -->
+    <div id="loading" hidden>
+      <p>Loading...</p>
+    </div>
+
+    <!-- Disambiguation state (multiple city matches) -->
+    <div id="choices" hidden>
+      <p>Multiple matches found — pick one:</p>
+      <ul id="choices-list"></ul>
+    </div>
+
+    <!-- Success state -->
+    <div id="result" hidden>
+      <h2 id="city-name"></h2>
+      <p id="country"></p>
+      <img id="weather-icon" src="" alt="" />
+      <p id="temperature"></p>
+      <p id="description"></p>
+    </div>
+
+    <!-- Error state -->
+    <div id="error" hidden>
+      <p id="error-message"></p>
+    </div>
+  </main>
+</body>
+</html>
